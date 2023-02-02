@@ -1,0 +1,36 @@
+&input_deck
+
+! number of frames
+max_frame	= 2500
+
+! spacing between frames (dt) - must be a factor of max_frame
+dt	        = 1
+
+! atom type 1 for RDF
+typ_1		= 'CA'
+
+! atom type 2 for RDF - don't change this!!
+typ_2		= 'OW'
+
+! number of bins in RDF
+n_bin		= 200
+
+! number of waters represented by one bead (mapping ratio)
+n_map		= 4
+
+! cutoff distance for selection of CoMs in initial frame (nm)
+init_cut	= 0.37d0
+
+! switch defines which clusters to include in RDF 
+! 4 = only 4 water clusters
+! 345 = only 3, 4 and 5 water clusters
+! 34 = only 3, 4 water clusters
+! 45 = only 3, 4, 5 water clusters 
+cluster_switch = 34
+
+! print all clusters to output_cluster.gro
+!all_cluster     = .true.
+
+! analysis jobs - read in case array to determine what to analyse
+
+/
